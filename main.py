@@ -52,7 +52,7 @@ def save_results_to_sheets(credentials_file, spreadsheet_name, worksheet_name, u
     except gspread.exceptions.SpreadsheetNotFound:
         spreadsheet = gc.create(spreadsheet_name)
         spreadsheet.share('searchallurls@searchallurls.iam.gserviceaccount.com', perm_type='user', role='writer')
-        print("Spreadsheet created and shared with your service account. Please refresh the Google Drive.")
+        print("Spreadsheet created and shared with your service account.")
 
     worksheet = spreadsheet.add_worksheet(title=worksheet_name, rows=max(1, len(urls)) + 1, cols=1)
     worksheet.update('A1', [['URL']] + [[url] for url in urls])
@@ -74,6 +74,6 @@ if __name__ == "__main__":
     site = input("Enter the site URL: ")
     spreadsheet_name = input("Enter the name of the Google Sheet: ")
     urls = main(site, spreadsheet_name)
-    print("Fetched URLs:")
+    # print("Fetched URLs:")
     for url in urls:
         print(url)
