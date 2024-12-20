@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SiteToSheet - Fetch Results</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+  </head>
+  <body>
+    <h1>Fetch Results</h1>
+    <p>URLs have been successfully saved to your Google Sheet.</p>
+    <ul>
+      {% for url in urls %}
+      <li><a href="{{ url }}" target="_blank">{{ url }}</a></li>
+      {% endfor %}
+    </ul>
+    <a href="/" class="button">Go Back</a>
+  </body>
+</html>

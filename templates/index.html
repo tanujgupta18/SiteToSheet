@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SiteToSheet - URL Fetcher</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+  </head>
+  <body>
+    <h1>SiteToSheet</h1>
+    <form method="post">
+      <label for="site_url">Site URL:</label>
+      <input
+        type="text"
+        id="site_url"
+        name="site_url"
+        placeholder="e.g., https://example.com"
+        required
+      /><br />
+      <label for="sheet_name">Google Sheet Name:</label>
+      <input
+        type="text"
+        id="sheet_name"
+        name="sheet_name"
+        placeholder="Enter Sheet Name"
+        required
+      /><br />
+      <input type="submit" value="Submit" />
+    </form>
+    <footer>
+      <p>
+        Powered by
+        <a href="https://github.com/tanujgupta18/SiteToSheet">SiteToSheet</a>
+      </p>
+    </footer>
+  </body>
+</html>
