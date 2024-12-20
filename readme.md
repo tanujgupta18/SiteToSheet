@@ -16,7 +16,6 @@ Before running the application, you need to set up the following:
 1. **Google Custom Search API Key**: Obtain a valid API key from the [Google Cloud Console](https://console.cloud.google.com/).
 2. **Google Custom Search Engine (CSE) ID**: Create a custom search engine at [Google CSE](https://cse.google.com/cse/) and get your CSE ID.
 3. **Google Service Account Credentials**: Create a service account in your Google Cloud project and generate a JSON credentials file for accessing Google Sheets.
-4. **Render Account** (optional for deployment): If you plan to deploy on [Render](https://render.com), you need an account there to set up and deploy your app.
 
 ## **Setup**
 
@@ -58,17 +57,6 @@ Make sure to replace `your_google_api_key`, `your_custom_search_engine_id`, and 
 ### 4. Create and Share a Google Sheet
 
 Ensure that you have a Google Sheet where the results will be saved. If the sheet doesn't exist, the script will create a new one and share it with your service account email. You will need to share the Google Sheets document with the service account email provided in your service account JSON credentials file.
-
-### 5. Configure and Deploy with Render (Optional)
-
-If you wish to deploy this project on Render, follow these steps:
-
-1. Create a new **Web Service** on Render and link your GitHub repository.
-2. In **Render's Dashboard**, go to the **Settings** tab and add your environment variables as **secrets**:
-   - `GOOGLE_API_KEY`
-   - `GOOGLE_CSE_ID`
-   - `GOOGLE_CREDENTIALS_JSON`
-3. Deploy the service to start the Flask application.
 
 ## **Usage**
 
